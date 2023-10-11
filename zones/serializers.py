@@ -1,11 +1,11 @@
 from rest_framework import serializers
 
-# from users.serializers import UserSerializer
+from users.serializers import UserSerializer
 from zones.models import *
 
 class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
-        # user = UserSerializer(source='user')
+        user = UserSerializer(source='user')
 
         models = Review
         fields = ['content, rating, user']
