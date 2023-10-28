@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'users',
     'posts',
     'zones',
+    'authentication',
     'rest_framework',
 
 ]
