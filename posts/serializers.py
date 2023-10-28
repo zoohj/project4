@@ -1,14 +1,14 @@
 from rest_framework import serializers
 
 from config import settings
-from users.serializers import UserSeriailer
+from users.serializers import UserSerializer
 
 from .models import Post
 from users.models import User
 
 
 class PostSerializer(serializers.ModelSerializer):
-    author = UserSeriailer(
+    author = UserSerializer(
         source='author',
     )
     class Meta:

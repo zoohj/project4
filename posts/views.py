@@ -19,11 +19,11 @@ class PostDetailView(generics.RetrieveAPIView):
     serializer_class= PostSerializer
 
 class PostMostView(generics.ListAPIView):
-    queryset = Post.objects.all.order_by('-likes')
+    queryset = Post.objects.all().order_by('-likes')
     serializer_class= PostSerializer
 
 class PostRecentView(generics.ListAPIView):
-    queryset = Post.objects.all.order_by('-created_at')
+    queryset = Post.objects.all().order_by('-created_at')
     serializer_class= PostSerializer
 
 class PostDeleteView(generics.DestroyAPIView):
